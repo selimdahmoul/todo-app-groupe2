@@ -10,6 +10,16 @@ function ajouterTache(){
         input.value = "";
     }
 
+    function activerSuppressionTache(){
+        const liste = document.getElementById("tasKList");
+        liste.addEventListener ("click",function(event) {
+            const elementClique =event.target;
+            if (elementClique.tagName==="LI"){
+                elementClique.remove();
+            }
+        });
+    }
+
 
     const boutonAjout = document.getElementById("addTasKBtn");
     boutonAjout.addEventListener("click",ajouterTache);
